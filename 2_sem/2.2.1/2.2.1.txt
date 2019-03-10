@@ -1,0 +1,223 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel} %локализация
+\usepackage{graphicx}%Вставка картинок правильная
+\usepackage{float}%"Плавающие" картинки
+\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+\usepackage{fancybox,fancyhdr} %колонтитулы
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools} %математика
+
+%\usepackage[12pt]{extsizes} % размер шрифта
+
+\author{Зажигина  Е.А., Боева Г.Л.,  группа 816}
+\title{Лабораторная работа 2.2.1\\ Исследование взаимной диффузии газов}
+
+
+\date{МФТИ, Февраль 2019}
+
+\begin{document}
+
+\maketitle
+\newpage
+\section{Цель работы:}
+1) регистрация зависимости концентрации гелия
+в воздухе от времени с помощью датчиков теплопроводности при
+разных начальных давлениях смеси газов; 2) определение коэффициента диффузии по результатам измерений.
+\section{Оборудование:}
+измерительная установка; форвакуумный насос; баллон с газом (гелий); манометр; источник питания;
+магазин сопротивлений; гальванометр; секундомер.
+\section{Теоретические сведения: }
+Диффузией называется самопроизвольное перемешивание молекул, происходящее вследствие их теплового движения. В жидкости
+диффузия происходит быстрее, чем в твердых телах, а в газах —
+быстрее, чем в жидкостях. В тех случаях, когда изучается перемешивание молекул одного сорта, говорят о самодиффузии, а если перемешиваются разные молекулы — о взаимной (или концентрационной)
+диффузии.
+
+Для исследования взаимной диффузии газов и определения коэффициента диффузии используется установка, изображенная на рис. 1.
+Два сосуда с объемами V1 и V2 соединены трубкой длины l и сечения
+S. Сосуды заполнены смесью двух газов при одинаковом давлении,
+но с различной концентрацией компонентов. Вследствие взаимной
+диффузии концентрации каждого из компонентов в обоих сосудах с
+течением времени выравниваются.
+\begin{center}
+    
+
+\includegraphics[scale = 0.5]{1.jpg}
+\end{center}
+
+Рассмотрим процесс выравнивания концентрации. Пусть концентрации одного из компонентов смеси в сосудах V1 и V2 равны n1 и
+n2. Плотность диффузионного потока любого компонента (т. е. количество вещества, проходящее в единицу времени через единичную
+поверхность) определяется законом Фика (2.5):
+\begin{equation}
+j = -D \frac{\partial n}{ \partial x}
+\end{equation}
+
+где D — коэффициент взаимной диффузии газов, а j — плотность
+потока частиц
+Расчеты упрощается благодаря тому, что объём соединительной трубки мал по сравнению с объемами сосудов и  концентрацию газов внутри каждого сосуда
+можно считать постоянной по всему объему.
+
+Диффузионный поток в любом сечении трубки одинаков. Поэтому
+$ J = - DS \frac{\partial n }{\partial x}  $не меняется вдоль трубки. Следовательно,
+ \begin{equation}
+ J = - DS \frac{n_1 - n_2}{l} 
+ \end{equation} 
+Обозначим через $\Delta n_1 и \Delta n_2$ изменения концентрации в объемах
+V1 и V2 за время $\Delta t$. Тогда $V_1 \Delta n_1$ равно изменению количества компонента в объеме $V_1$, а $\ Delta n_2$ — изменению количества этого компонента в V2. Из закона сохранения вещества следует, что $V_1 n_1 + V_2 n_2$ = const, откуда$V_1 n_1 = - V_2 n_2$. Эти изменения происходят вследствие диффузии, поэтому
+\begin{equation}
+    V_1 \Delta n_1 = - V_2 \Delta n_2 = J \Delta t = - DS \frac{n_1 - n_2}{ l} \Delta t.
+\end{equation} 
+Деля это равенство на $\Delta t$ , получим
+\begin{equation}
+    V_1 \frac{dn_1}{dt} = - DS \frac{n_1 - n_2}{ l},  V_2 \frac{dn_2}{dt} =  DS \frac{n_1 - n_2}{ l},
+\end{equation} 
+Разделив первое из этих уравнений на V1, а второе на V2 и вычтя эти равенства друг из друга получим:
+\begin{equation}
+    \frac{dn_1}{dt} - \frac{dn_2}{dt} = - \frac{n_1 - n_2}{l}DS(\frac{1}{V_1} - \frac{1}{V_2})
+\end{equation}
+Введем $n_1 - n_2$ и проинтегрируем:
+\begin{equation}
+    (n_1 - n_2) = (n_1 - n_2)_0e^{-t/\tau}
+\end{equation}
+где $(n1 - n2)_0$ — разность концентраций в начальный момент времени,
+\begin{equation}
+    \tau = \frac{V_1 V_2}{ V_1 + V_2}\frac{l}{SD} = \frac{c}{D}
+\end{equation}
+Формула  показывает, что разность концентраций убывает по экспоненциальному закону, и тем быстрее, чем меньше $\tau$ (постоянная времени процесса). Величина $\tau$ определяется геометрическими размерами установки (l, S, V1, V2) и величиной коэффициента диффузии D
+Для измерения коцентраций в данной установке применяются датчики теплопроводности D1 и D2 и используется зависимость теплопроводности газовой смеси от ее состава. Танкая проволочка радиуса $r_{\text{пр}}$, протяянутая вдоль оси стеклянного цилиндра радиуса $R_{\text{ц}}$, нагреется током. Тепло от проволочки к стенке цилиндра переходит главным образом в следсвтие теплопроводности газа, находящегося внутри цилиндра. Количествр тепоами, передающееся стенке в единицу времени:
+\begin{equation}
+    Q = \kappa \frac{2\pi L}{ln(\frac{R_{\text{ц}}}{r_{\text{пр}}})}(T_1 - T_2),
+\end{equation}
+где $\kappa$ - теплопроводность, L - длина нити, $ T_1, T_2$ - температуры проволочки и стенки. При заданном режиме нагревания температура проволочки соотвественно ее сопротивление определяются теплопроводностью газа и, следовательно, его составом.
+
+Для измерения разности концентраций газов используется мостовая схема (см. рис. 2).
+
+\begin{center}
+    
+
+\includegraphics[scale = 0.5]{2.jpg}
+\end{center}
+
+В процессе диффузии разность крнцентраций убывает по экспоненциальному закону. По тому же закону изменя.тся показатели гальванометра во времени:
+\begin{equation}
+    N = N_0 e^{- \frac{t}{\tau}},
+\end{equation}
+где $N_0$ - показатель в начальный момент времени.
+
+\section{Экспериментальная установка}
+Общий вид конструкции приведен на рис. 1. Схема моста приведена на рис. 2. На рис. 3 показана конструкция многоходового крана К6. 
+
+\begin{center}
+    
+
+\includegraphics[scale = 0.5]{3.jpg}
+\end{center}
+
+Установка состоит из двух сосудов V1 и V2, соединенных краном K3 форвакуумного насоса Ф.Н. с выключателем Т, манометра М и системы напуска гелия, включающей в себя краны К6 и К7. Кран К5 позволяет соединять форвакуумный насос либо с установкой, либо с атмосферой. Между форвакуумным насосом и краном К5 вставлен предохранительный баллон П.Б., защищающий кран К5 и установку при неправильной эксплуатации ее от попадания форвакуумного масла из насоса Ф.Н. Сосуды V1 и V2 и порознь и вместе можно соединятькак с системой напуска гелия, так и с форвакуумным насосом. Для этого служат краны К1, К2, К4 и К5. Манометр М регистрирует давление газа, до котороого заполняют тот или другой сосуды.
+
+\section{Ход работы:}
+\begin{itemize}
+    
+\item Включим питание электрической схемы установки. Откроем краны К1, К2, К3. Очистим установку от всех газов, открыв кран К4 и включив Ф.Н: для этого ждем 3 минуты. 
+
+\item Запустим воздух до рабочего давления P раб. Сбалансируем мост. Заполним установку рабочей смесью и приступим к измерению: откроем К3 и снимем зависимость показания гальванометра от времени:
+
+
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llllllllllll}
+\hline
+\multicolumn{1}{|l|}{P, торр} & \multicolumn{1}{l|}{-}     & \multicolumn{1}{l|}{1}   & \multicolumn{1}{l|}{2}     & \multicolumn{1}{l|}{3}     & \multicolumn{1}{l|}{4}     & \multicolumn{1}{l|}{5}     & \multicolumn{1}{l|}{6}     & \multicolumn{1}{l|}{7}     & \multicolumn{1}{l|}{8}      & \multicolumn{1}{l|}{9}      & \multicolumn{1}{l|}{10}     \\ \hline
+\multicolumn{1}{|l|}{40}      & \multicolumn{1}{l|}{t, с}  & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{15,61} & \multicolumn{1}{l|}{31,22} & \multicolumn{1}{l|}{46,83} & \multicolumn{1}{l|}{62,43} & \multicolumn{1}{l|}{78,04} & \multicolumn{1}{l|}{93,65} & \multicolumn{1}{l|}{109,26} & \multicolumn{1}{l|}{124,87} & \multicolumn{1}{l|}{140,48} \\ \hline
+\multicolumn{1}{|l|}{}        & \multicolumn{1}{l|}{U, мВ} & \multicolumn{1}{l|}{255} & \multicolumn{1}{l|}{236,4} & \multicolumn{1}{l|}{219,8} & \multicolumn{1}{l|}{203,3} & \multicolumn{1}{l|}{189,6} & \multicolumn{1}{l|}{176}   & \multicolumn{1}{l|}{163,3} & \multicolumn{1}{l|}{152}    & \multicolumn{1}{l|}{142}    & \multicolumn{1}{l|}{132,5}  \\ \hline
+\multicolumn{1}{|l|}{}        & \multicolumn{1}{l|}{ln U}  & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{0,076} & \multicolumn{1}{l|}{0,149} & \multicolumn{1}{l|}{0,226} & \multicolumn{1}{l|}{0,297} & \multicolumn{1}{l|}{0,371} & \multicolumn{1}{l|}{0,445} & \multicolumn{1}{l|}{0,517}  & \multicolumn{1}{l|}{0,585}  & \multicolumn{1}{l|}{0,655}  \\ \hline
+                              &                            &                          &                            &                            &                            &                            &                            &                            &                             &                             &                             \\ \hline
+\multicolumn{1}{|l|}{P, торр} & \multicolumn{1}{l|}{-}     & \multicolumn{1}{l|}{1}   & \multicolumn{1}{l|}{2}     & \multicolumn{1}{l|}{3}     & \multicolumn{1}{l|}{4}     & \multicolumn{1}{l|}{5}     & \multicolumn{1}{l|}{6}     & \multicolumn{1}{l|}{7}     & \multicolumn{1}{l|}{8}      & \multicolumn{1}{l|}{9}      & \multicolumn{1}{l|}{10}     \\ \hline
+\multicolumn{1}{|l|}{78}      & \multicolumn{1}{l|}{t, с}  & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{15,7}  & \multicolumn{1}{l|}{31,39} & \multicolumn{1}{l|}{47,09} & \multicolumn{1}{l|}{62,78} & \multicolumn{1}{l|}{78,48} & \multicolumn{1}{l|}{94,17} & \multicolumn{1}{l|}{109,87} & \multicolumn{1}{l|}{125,57} & \multicolumn{1}{l|}{141,26} \\ \hline
+\multicolumn{1}{|l|}{}        & \multicolumn{1}{l|}{U, мВ} & \multicolumn{1}{l|}{255} & \multicolumn{1}{l|}{245,3} & \multicolumn{1}{l|}{235}   & \multicolumn{1}{l|}{225}   & \multicolumn{1}{l|}{216}   & \multicolumn{1}{l|}{206,5} & \multicolumn{1}{l|}{198}   & \multicolumn{1}{l|}{190,1}  & \multicolumn{1}{l|}{182}    & \multicolumn{1}{l|}{175}    \\ \hline
+\multicolumn{1}{|l|}{}        & \multicolumn{1}{l|}{ln U}  & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{0,039} & \multicolumn{1}{l|}{0,082} & \multicolumn{1}{l|}{0,125} & \multicolumn{1}{l|}{0,166} & \multicolumn{1}{l|}{0,211} & \multicolumn{1}{l|}{0,253} & \multicolumn{1}{l|}{0,294}  & \multicolumn{1}{l|}{0,337}  & \multicolumn{1}{l|}{0,376}  \\ \hline
+                              &                            &                          &                            &                            &                            &                            &                            &                            &                             &                             &                             \\ \hline
+\multicolumn{1}{|l|}{P, торр} & \multicolumn{1}{l|}{-}     & \multicolumn{1}{l|}{1}   & \multicolumn{1}{l|}{2}     & \multicolumn{1}{l|}{3}     & \multicolumn{1}{l|}{4}     & \multicolumn{1}{l|}{5}     & \multicolumn{1}{l|}{6}     & \multicolumn{1}{l|}{7}     & \multicolumn{1}{l|}{8}      & \multicolumn{1}{l|}{9}      & \multicolumn{1}{l|}{10}     \\ \hline
+\multicolumn{1}{|l|}{152}     & \multicolumn{1}{l|}{t, с}  & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{12,96} & \multicolumn{1}{l|}{25,91} & \multicolumn{1}{l|}{25,91} & \multicolumn{1}{l|}{38,87} & \multicolumn{1}{l|}{51,83} & \multicolumn{1}{l|}{64,78} & \multicolumn{1}{l|}{77,74}  & \multicolumn{1}{l|}{90,7}   & \multicolumn{1}{l|}{103,65} \\ \hline
+\multicolumn{1}{|l|}{}        & \multicolumn{1}{l|}{U, мВ} & \multicolumn{1}{l|}{255} & \multicolumn{1}{l|}{235}   & \multicolumn{1}{l|}{217,1} & \multicolumn{1}{l|}{202,1} & \multicolumn{1}{l|}{189,2} & \multicolumn{1}{l|}{178,2} & \multicolumn{1}{l|}{169,3} & \multicolumn{1}{l|}{161}    & \multicolumn{1}{l|}{154}    & \multicolumn{1}{l|}{148}    \\ \hline
+\multicolumn{1}{|l|}{}        & \multicolumn{1}{l|}{ln U}  & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{0,081} & \multicolumn{1}{l|}{0,161} & \multicolumn{1}{l|}{0,232} & \multicolumn{1}{l|}{0,299} & \multicolumn{1}{l|}{0,358} & \multicolumn{1}{l|}{0,41}  & \multicolumn{1}{l|}{0,46}   & \multicolumn{1}{l|}{0,504}  & \multicolumn{1}{l|}{0,544}  \\ \hline
+                              &                            &                          &                            &                            &                            &                            &                            &                            &                             &                             &                             \\ \hline
+\multicolumn{1}{|l|}{P, торр} & \multicolumn{1}{l|}{-}     & \multicolumn{1}{l|}{1}   & \multicolumn{1}{l|}{2}     & \multicolumn{1}{l|}{3}     & \multicolumn{1}{l|}{4}     & \multicolumn{1}{l|}{5}     & \multicolumn{1}{l|}{6}     & \multicolumn{1}{l|}{7}     & \multicolumn{1}{l|}{8}      & \multicolumn{1}{l|}{9}      & \multicolumn{1}{l|}{10}     \\ \hline
+\multicolumn{1}{|l|}{302}     & \multicolumn{1}{l|}{t, с}  & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{14,26} & \multicolumn{1}{l|}{28,52} & \multicolumn{1}{l|}{42,78} & \multicolumn{1}{l|}{57,04} & \multicolumn{1}{l|}{71,3}  & \multicolumn{1}{l|}{85,57} & \multicolumn{1}{l|}{99,83}  & \multicolumn{1}{l|}{114,09} & \multicolumn{1}{l|}{128,35} \\ \hline
+\multicolumn{1}{|l|}{}        & \multicolumn{1}{l|}{U, мВ} & \multicolumn{1}{l|}{255} & \multicolumn{1}{l|}{251}   & \multicolumn{1}{l|}{245,5} & \multicolumn{1}{l|}{240}   & \multicolumn{1}{l|}{235}   & \multicolumn{1}{l|}{229}   & \multicolumn{1}{l|}{224}   & \multicolumn{1}{l|}{219}    & \multicolumn{1}{l|}{214}    & \multicolumn{1}{l|}{209,7}  \\ \hline
+\multicolumn{1}{|l|}{}        & \multicolumn{1}{l|}{ln U}  & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{0,016} & \multicolumn{1}{l|}{0,038} & \multicolumn{1}{l|}{0,061} & \multicolumn{1}{l|}{0,082} & \multicolumn{1}{l|}{0,108} & \multicolumn{1}{l|}{0,13}  & \multicolumn{1}{l|}{0,152}  & \multicolumn{1}{l|}{0,175}  & \multicolumn{1}{l|}{0,196}  \\ \hline
+                              &                            &                          &                            &                            &                            &                            &                            &                            &                             &                             &                            
+\end{tabular}%
+}
+\end{table}
+$$\sigma_p = 2 \text{торр}    \hspace{10mm}  \sigma_t = 2 c$$
+
+
+\item Убедимся, что процесс диффузии подчиняется экспоненциальному закону. Для этого построим график зависимости логарифма показаний гальванометра от времени. 
+\begin{center}
+    
+\includegraphics[width=\textwidth]{SS.JPG}
+\end{center}
+\item
+Рассчитаем угловые коэффициенты каждой прямой. С помощью полученных значений рассчитаем коэффициенты взаимной диффузии при выбранных давлениях. Параметры установки:
+$V_1 = 800 \pm 5 cm^3 \hspace{10mm}  V_2 = 800 \pm 5 cm^3  \hspace{10mm} S/L = 11.0 \pm 0.1 1/cm$
+
+$c = 4400 cm^2$
+\begin{center}
+    
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Давление  & Угл коэффициент = a * 10\textasciicircum{}-3 & \Delta lnP & \Delta t & \sigma_a   \\ \hline
+40, торр  & 0,0045                                       & -16,6   & 15,61 & 0,132928 \\ \hline
+78, торр  & 0,0026                                       & 0,043   & 15,69 & 0,175947 \\ \hline
+152, торр & 0,0031                                       & 0,08    & 12,95 & 0,196775 \\ \hline
+302, торр & 0,0015                                       & 0,022   & 14,26 & 0,185175 \\ \hline
+\end{tabular}%
+}
+\end{table}
+\end{center}
+
+\item
+Построим график зависимости коэффициента диффузии от давления в координатах D, 1/P - он имеет вид прямой линии. 
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+P, торр                                         & 40          & 78       & 152      & 302      \\ \hline
+1/P, торр\textasciicircum{}-1                   & 0,025       & 0,012821 & 0,006579 & 0,003311 \\ \hline
+a * 10^3, c\textasciicircum{}-1                        & 4,5         & 2,6      & 3,1      & 1,55     \\ \hline
+c, см\textasciicircum{}2                        & 4400        & 4400     & 4400     & 4400     \\ \hline
+D см\textasciicircum{}2/с & 19,8        & 11,44    & 9,64     & 6,82     \\ \hline
+\sigma_a                                            & 0,132927829 & 0,175947 & 0,196775 & 0,185175 \\ \hline
+\sigma_t                                          & \multicolumn{4}{l|}{2}                       \\ \hline          
+\sigma_D                                           & 0,265855657 & 0,351894 & 0,39355  & 0,370351 \\ \hline
+\end{tabular}%
+}
+\end{table}
+\begin{center}
+    
+
+\includegraphics[width=\textwidth]{S2.JPG}
+\end{center}
+Атмосферное давление в нашем случае было равно 99,4 кПа = 745,5 торр. При значении 0,00134 торр$^{-1} $ коэф. диффузии равен = 5,8  см*см/с
+
+\item
+Оценим длину свободного пробега и размер молекулы:
+$$ \lambda = \frac{3 D}{v} == 3D * (\frac{\mu}{3RT})^0.5 = 1,27 \pm 0.05 10^{-6} \textit{м}$$
+$$ d = \sqrt{\frac{KT}{P \lambda}} = 18 \pm 0,7  \text{нм}$$ 
+
+
+
+\end{itemize}
+
+\end{document}
+
+\end{itemize}
+
+\end{document}
