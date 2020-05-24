@@ -1,2 +1,2 @@
 # MIPT Laboratory works
-.tex files with calcilations mainly
+.tex files with calculations mainly
